@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SiddharthShyniben/cryptle-backend/issues"
   },
-  "homepage": "https://github.com/SiddharthShyniben/cryptle-backend#readme"
+  "homepage": "https://github.com/SiddharthShyniben/cryptle-backend#readme",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
 }
