@@ -21,6 +21,7 @@
 	"homepage": "https://github.com/SiddharthShyniben/cryptle-backend#readme",
 	"dependencies": {
 		"@koa/router": "^10.1.1",
-		"koa": "^2.13.4"
+		"koa": "^2.13.4",
+		"koa-body": "^4.2.0"
 	}
 }
