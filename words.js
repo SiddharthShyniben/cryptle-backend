@@ -1,4 +1,4 @@
-const possibleWords = [
+export const possibleWords = [
 	'airdrop',
 	'altcoin',
 	'bearish',
@@ -45,3 +45,13 @@ const possibleWords = [
 	'testnet',
 	'txnhash',
 ];
+
+export const allowedWords = require('fs').readFileSync('./words.txt', 'utf8').split('\n').concat(possibleWords);
+
+export const getTodayWord = () => {
+	const startDate = new Date('2022-03-14').getTime();
+	const today = new Date().getTime();
+
+	const days = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+	return possibleWords[days % possibleWords.length];
+};
