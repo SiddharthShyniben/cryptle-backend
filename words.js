@@ -1,3 +1,5 @@
+import {readFileSync} from 'fs';
+
 export const possibleWords = [
 	'airdrop',
 	'altcoin',
@@ -46,7 +48,7 @@ export const possibleWords = [
 	'txnhash',
 ];
 
-export const allowedWords = require('fs').readFileSync('./words.txt', 'utf8').split('\n').concat(possibleWords);
+export const allowedWords = readFileSync('./words.txt', 'utf8').split('\n').concat(possibleWords);
 
 export const getTodayWord = () => {
 	const startDate = new Date('2022-03-14').getTime();
