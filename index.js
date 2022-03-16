@@ -2,6 +2,7 @@ import Koa from 'koa';
 import Router from '@koa/router';
 
 import koaBody from 'koa-body';
+import koaCors from '@koa/cors';
 
 import {allowedWords, getTodayWord} from './words.js';
 import compareGuess from './compare.js';
@@ -34,6 +35,7 @@ router.post('/wordle-today', koaBody(), async ctx => {
 });
 
 app
+	.use(koaCors())
 	.use(router.routes())
 	.use(router.allowedMethods());
 
